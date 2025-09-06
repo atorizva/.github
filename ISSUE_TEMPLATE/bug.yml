@@ -1,0 +1,82 @@
+name: Bug Report
+description: Report a problem or unexpected behavior
+title: "[Bug]: "
+labels: [bug]
+assignees: [atorizva]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please help us by filling out the details below.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Where are you seeing the issue?
+      placeholder: "e.g. Windows 11, Python 3.12, Chrome 128"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened?
+      placeholder: "The app crashes when I click on..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide exact steps so we can reproduce it.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened instead?
+      placeholder: "I expected the page to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs / Screenshots
+      description: Paste error logs or add screenshots if applicable.
+      placeholder: "Error: stack trace here..."
+      render: shell
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low (minor inconvenience)
+        - Medium (affects normal usage)
+        - High (blocks functionality)
+        - Critical (crash/data loss)
+      validatinons:
+        required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked if a related issue already exists
+        - label: I will link related issues/PRs if applicable
+    validations:
+      required: true
