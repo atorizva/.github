@@ -1,0 +1,56 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature]: "
+labels: [enhancement]
+assignees: [atorizva]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! Please provide as much detail as possible.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: One-line description of the feature.
+      placeholder: "e.g. Add dark mode support"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to Solve
+      description: What problem does this feature address?
+      placeholder: "Currently, users struggle with..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How do you suggest solving the problem?
+      placeholder: "Add a settings toggle for dark mode..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked if a related issue already exists
+        - label: I will link related issues/PRs if applicable
+    validations:
+      required: true
