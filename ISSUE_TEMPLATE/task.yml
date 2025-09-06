@@ -1,0 +1,48 @@
+name: Task
+description: A task or piece of work to be completed.
+title: "[Task]: "
+labels: [task]
+assignees: [atorizva]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please use this template to describe the task you want to track.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Task Summary
+      description: Provide a short one-line description of the task.
+      placeholder: "e.g. Add logging to ETL pipeline"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Add more context or steps for completing the task.
+      placeholder: "This task involves adding structured logging with log levels..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this task?
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked if a related issue already exists
+        - label: I will link related issues/PRs if applicable
