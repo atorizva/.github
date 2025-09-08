@@ -68,7 +68,7 @@ body:
         - Medium (affects normal usage)
         - High (blocks functionality)
         - Critical (crash/data loss)
-      validatinons:
+      validations:
         required: true
 
   - type: checkboxes
